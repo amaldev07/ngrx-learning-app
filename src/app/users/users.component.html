@@ -1,0 +1,23 @@
+<h2>Users NgRx Demo</h2>
+
+<button type="button" (click)="loadUsers()">
+  Load Users
+</button>
+
+@if (loading$ | async) {
+<p>Loading users...</p>
+}
+
+@if (error$ | async; as error) {
+<p style="color: red;">{{ error }}</p>
+}
+
+@if (users$ | async; as users) {
+<ul>
+  @for (user of users; track user.id) {
+  <li>
+    <strong>{{ user.name }}</strong> - {{ user.email }}
+  </li>
+  }
+</ul>
+}
