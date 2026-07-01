@@ -1,0 +1,16 @@
+.main-menu {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+
+  a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+
+    &.active {
+      color: #1976d2;
+    }
+  }
+}

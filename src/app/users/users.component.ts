@@ -16,7 +16,6 @@ export class UsersComponent {
   error$ = this.usersFacade.error$;
 
   loadUsers(): void {
-    debugger;
     this.usersFacade.loadUsers();
   }
 }
